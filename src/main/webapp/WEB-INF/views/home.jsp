@@ -20,23 +20,23 @@
 				</tr>
 
 				<c:forEach items="${playerList}" var="top10">
-					<c:if test="${top10.playerName!=player.playerName}">
-					${player.playerName}
+					<c:if test="${top10.playerName!=player.summonerName}">
+					${player.summonerName}
 					
 					<tr>
 							<td class="left"><input type="radio" name="name"
-								value="${ top10.playerName}" /></td>
+								value="${ top10.summonerName}" /></td>
 							<td>${top10.summonerName}</td>
 							<td>${top10.playerName}</td>
 							<td>${top10.position}</td>
 							<td>${top10.team}</td>
 							<td><form action="editPlayer.do">
-									<button type="submit" name="Edit" value="${top10.playerName}">
+									<button type="submit" name="Edit" value="${top10.summonerName}">
 										Edit</button>
 								</form></td>
 							<td><form action="delete.do">
-									<button type="submit" name="Delete" value="${top10.playerName}">Delete
-										Selected Items</button>
+									<button type="submit" name="Delete"
+										value="${top10.summonerName}">Delete Selected Items</button>
 								</form></td>
 						</tr>
 					</c:if>
@@ -52,7 +52,7 @@
 									value="${top10.position}" /></td>
 								<td><input type="text" name="team" value="${top10.team}" /></td>
 								<td>
-									<button type="submit" name="Edit" value="${top10.playerName}">
+									<button type="submit" name="Edit" value="${top10.summonerName}">
 										Edit</button>
 								</td>
 							</tr>
@@ -68,7 +68,7 @@
 			<form action="CreateNew.do">
 				<h3 style="color: white;">Add a Player</h3>
 				<br /> <label>Summoner Name<input type="text"
-					name="summonerName" /></label> <label>Player Name<input
+					name="summonerName" /></label> <label>Summoner Name<input
 					type="text" name="playerName" /></label> <label>Position<input
 					type="text" name="position" /></label> <label>Team<input
 					type="text" name="team" /></label> <input class="sumbit" type="submit"

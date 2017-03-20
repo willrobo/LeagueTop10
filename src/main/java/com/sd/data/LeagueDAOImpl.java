@@ -127,4 +127,10 @@ public class LeagueDAOImpl implements LeagueDAO {
 
 	}
 
+	@Override
+	public Player getPlayerByTeam(String team) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

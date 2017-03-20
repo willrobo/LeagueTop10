@@ -9,10 +9,10 @@ public interface LeagueDAO {
 	public Player getPlayerByName(String playerName);
 	public Player getPlayerBySummonerName(String summonerName);
 	public Player getPlayerByPosition(String position);
+	public Player getPlayerByTeam(String team);
 
 	public void addPlayer(Player player);
-	public void removePlayer(String playerName);
+	public void removePlayer(String summonerName);
 	Player editPlayer(Player player);
-
-
+	
 }
