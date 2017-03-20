@@ -20,7 +20,7 @@
 				</tr>
 
 				<c:forEach items="${playerList}" var="top10">
-					<c:if test="${top10.playerName!=player.summonerName}">
+					<c:if test="${top10.summonerName!=player.summonerName}">
 					${player.summonerName}
 					
 					<tr>
@@ -41,7 +41,7 @@
 						</tr>
 					</c:if>
 					<form action="edit.do">
-						<c:if test="${top10.playerName==player.playerName}">
+						<c:if test="${top10.summonerName==player.summonerName}">
 
 							<tr>
 								<td><input type="hidden" name="summonerName"
